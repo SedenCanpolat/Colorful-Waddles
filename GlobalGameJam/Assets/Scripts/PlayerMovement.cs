@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
         }
 
-        if (input.x != 0) input.y = 0;
+        //if (input.x != 0) input.y = 0;
 
         if (input != Vector2.zero)
         {
