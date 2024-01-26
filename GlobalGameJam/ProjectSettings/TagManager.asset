@@ -46,24 +46,12 @@ TagManager:
   - name: background
     uniqueID: 2120785227
     locked: 0
-  - name: itembottom
-    uniqueID: 3887630911
-    locked: 0
-  - name: itemtop
-    uniqueID: 1286502613
-    locked: 0
-  - name: itemtop2
-    uniqueID: 735054971
-    locked: 0
   - name: road
     uniqueID: 2843322567
     locked: 0
-  - name: objects
-    uniqueID: 2998725055
+  - name: object
+    uniqueID: 2899209563
     locked: 0
   - name: characters
     uniqueID: 1983755843
-    locked: 0
-  - name: mainchar
-    uniqueID: 2899209563
     locked: 0
