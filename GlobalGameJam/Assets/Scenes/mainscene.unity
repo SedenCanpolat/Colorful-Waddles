@@ -294,18 +294,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4023226370882176216, guid: d512fe3ddd30137499c0a437fefd7d40, type: 3}
   m_PrefabInstance: {fileID: 1098658077}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &382521334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 526365557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &526365557
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +304,6 @@ GameObject:
   m_Component:
   - component: {fileID: 526365559}
   - component: {fileID: 526365560}
-  - component: {fileID: 382521334}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
