@@ -64,3 +64,6 @@ TagManager:
   - name: characters
     uniqueID: 1983755843
     locked: 0
+  - name: mainchar
+    uniqueID: 2899209563
+    locked: 0
