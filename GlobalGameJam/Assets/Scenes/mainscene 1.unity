@@ -2216,6 +2216,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.813231
       objectReference: {fileID: 0}
+    - target: {fileID: 1705468737, guid: d512fe3ddd30137499c0a437fefd7d40, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 303094120638453986, guid: d512fe3ddd30137499c0a437fefd7d40, type: 3}
       propertyPath: m_SortingLayer
       value: 5
@@ -2239,6 +2243,14 @@ PrefabInstance:
     - target: {fileID: 4023226370882176214, guid: d512fe3ddd30137499c0a437fefd7d40, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023226370882176215, guid: d512fe3ddd30137499c0a437fefd7d40, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023226370882176215, guid: d512fe3ddd30137499c0a437fefd7d40, type: 3}
+      propertyPath: m_FlipY
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4023226370882176216, guid: d512fe3ddd30137499c0a437fefd7d40, type: 3}
       propertyPath: m_RootOrder
@@ -2326,7 +2338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3049764089112792852, guid: 363935f390032c249a2effaf675e0adf, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3049764089112792852, guid: 363935f390032c249a2effaf675e0adf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18680,7 +18692,7 @@ Transform:
   - {fileID: 632603201}
   - {fileID: 1890341496}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1815277560
 GameObject:

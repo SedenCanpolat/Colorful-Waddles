@@ -34,13 +34,13 @@ public class PlayerMovement : MonoBehaviour
 
         //if (input.x != 0) input.y = 0;
 
-        /* if (input != Vector2.zero)
+        if (input != Vector2.zero)
         {
             var targetPos = transform.position;
             targetPos.x += input.x;
             targetPos.y += input.y;
         }
-        */
+
         else
         {
             animator.SetBool("walk", false);
