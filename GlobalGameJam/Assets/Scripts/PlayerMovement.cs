@@ -10,13 +10,8 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 input;
 
-    private Animator animator;
+    public Animator animator;
 
-    void Start()
-    {
-        animator = GetComponent<Animator>();
-
-    }
 
     void Update()
     {
