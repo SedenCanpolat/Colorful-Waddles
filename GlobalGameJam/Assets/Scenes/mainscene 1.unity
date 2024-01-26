@@ -20449,6 +20449,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7566163493879367243, guid: b0fd1f40b7a733a4aa47c7fb8505f4c6, type: 3}
+      propertyPath: m_Color.b
+      value: 0.08749934
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566163493879367243, guid: b0fd1f40b7a733a4aa47c7fb8505f4c6, type: 3}
+      propertyPath: m_Color.g
+      value: 0.08749934
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566163493879367243, guid: b0fd1f40b7a733a4aa47c7fb8505f4c6, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566163494043198178, guid: b0fd1f40b7a733a4aa47c7fb8505f4c6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 7566163494043198178, guid: b0fd1f40b7a733a4aa47c7fb8505f4c6, type: 3}
       propertyPath: m_Name
       value: BookItem
