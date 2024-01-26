@@ -11,14 +11,23 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 input;
 
     public Animator animator;
+    public Rigidbody2D rb;
 
 
-    void Update()
+
+    void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
+    }
+    void FixedUpdate()
+    {
+
+        input.x = Input.GetAxisRaw("Horizontal");
+        input.y = Input.GetAxisRaw("Vertical");
+        rb.velocity = input * moveSpeed;
         if (!isMoving)
         {
-            input.x = Input.GetAxisRaw("Horizontal");
-            input.y = Input.GetAxisRaw("Vertical");
+
 
             if (input.x == 1)
             {
@@ -38,7 +47,6 @@ public class PlayerMovement : MonoBehaviour
                 targetPos.x += input.x;
                 targetPos.y += input.y;
 
-                StartCoroutine(Move(targetPos));
 
             }
         }
@@ -49,15 +57,18 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    IEnumerator Move(Vector3 targetPos)
+    void Move(Vector3 targetPos)
     {
         animator.SetBool("walk", true);
         isMoving = true;
-        while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
-            yield return null;
-        }
+
+
+        // while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)
+        // {
+
+        //     // transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
+
+        // }
         transform.position = targetPos;
 
         isMoving = false;
