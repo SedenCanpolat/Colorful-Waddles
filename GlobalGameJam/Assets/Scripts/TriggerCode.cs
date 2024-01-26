@@ -17,7 +17,6 @@ public class TriggerCode : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        //if (other.gameObject.GetComponent<Goal>()) is null or not == ?
-            other.gameObject.GetComponent<Goal>()?.OpenDialogue(); // script is Goal.cs
+            other.gameObject.GetComponent<Goal>()?.OpenDialogue();
     }
 }

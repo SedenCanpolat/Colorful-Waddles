@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
-    public string Dia;
+    public GameObject Bubble;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +22,6 @@ public class Goal : MonoBehaviour
     }
 
     public void OpenDialogue(){
-        Debug.Log(Dia);
+        Debug.Log(Bubble);
     }
 }
