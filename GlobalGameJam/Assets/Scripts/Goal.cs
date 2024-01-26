@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
-    public GameObject Bubble;
+    public Sprite Bubble;
+    public Sprite StartBubble;
+    public SpriteRenderer SpriteRenderer;
     // Start is called before the first frame update
     void Start()
     {
-        
+         SpriteRenderer.sprite = StartBubble;
     }
 
     // Update is called once per frame
@@ -22,6 +24,8 @@ public class Goal : MonoBehaviour
     }
 
     public void OpenDialogue(){
-        Debug.Log(Bubble);
+
+        Debug.Log("OpenDialogue");
+        SpriteRenderer.sprite = Bubble;
     }
 }
