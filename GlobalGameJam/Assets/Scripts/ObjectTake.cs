@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class ObjectTake : MonoBehaviour
 {
     public SpriteRenderer SpriteRenderer;
+    public GameObject ItemPrefab;
 
     public Item inventory;
 
@@ -24,7 +26,16 @@ public class ObjectTake : MonoBehaviour
     }
 
     public void dropItem(){
-      // inventory.GetComponent<ItemObject>().item;
+      if(Input.GetKeyDown(KeyCode.X)){
+                    Debug.Log("drop item");
+                    GameObject droppedItem = Instantiate(ItemPrefab, transform.position + new Vector3(1.15f,0,0), Quaternion.identity);
+                    droppedItem.GetComponent<ItemObject>().item = inventory;
+                    giveItem();             
+            }
+    }
+
+    void Update(){
+        dropItem();
     }
 
 }

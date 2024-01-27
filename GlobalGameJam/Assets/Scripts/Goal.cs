@@ -9,6 +9,7 @@ public class Goal : MonoBehaviour
     public SpriteRenderer SpriteRenderer;
 
     public Item PersonalizedItem;
+    //public GameObject dialogueBubble;
     public int FlagMission = 0;
 
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class Goal : MonoBehaviour
     public void CloseDialogue()
     {
         SpriteRenderer.sprite = null;
+        //dialogueBubble.SetActive(false);
     }
 
     public void OpenDialogue()
