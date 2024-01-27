@@ -17,7 +17,7 @@ public class Goal : MonoBehaviour
 
     [SerializeField] AudioClip colorSFX;
     [SerializeField] AudioClip laughSFX;
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +28,7 @@ public class Goal : MonoBehaviour
 
 
     public void CloseDialogue()
-    {   
+    {
         //dialogueBubble.SetActive(false);
         SpriteRenderer.sprite = null;
         gameObject.LeanRotateAround(Vector3.left + Vector3.forward + Vector3.right, 20f, 0.3f).setLoopPingPong();
@@ -38,18 +38,23 @@ public class Goal : MonoBehaviour
         Invoke("playlaughsfx", 0.7f);
     }
 
-    void playlaughsfx(){
+    void playlaughsfx()
+    {
         SoundEffectController.PlaySFX(laughSFX).SetVolume(1.45f);
     }
 
     public void OpenDialogue()
     {
-        Debug.Log("OpenDialogue");
-        SpriteRenderer.sprite = Bubble;
-        FlagMission = 1;
+        if (FlagMission == 0)
+        {
+            Debug.Log("OpenDialogue");
+            SpriteRenderer.sprite = Bubble;
+            FlagMission = 1;
+        }
     }
 
-    public void SetColorfulMap(bool state){
+    public void SetColorfulMap(bool state)
+    {
         ColorScene.SetActive(state);
     }
 

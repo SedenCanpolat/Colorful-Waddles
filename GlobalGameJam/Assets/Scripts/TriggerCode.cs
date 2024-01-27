@@ -24,7 +24,7 @@ public class TriggerCode : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         other.gameObject.GetComponent<Goal>()?.OpenDialogue();
-        
+
         if (goal.FlagMission == 1)
         {
             if (other.gameObject.GetComponent<Stone>())
@@ -37,10 +37,8 @@ public class TriggerCode : MonoBehaviour
             {
                 goal.CloseDialogue();
                 goal.FlagMission = 2;
-                
             };
             Debug.Log(count);
         }
-
     }
 }
