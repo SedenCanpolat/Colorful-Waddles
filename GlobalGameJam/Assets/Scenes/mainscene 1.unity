@@ -598,7 +598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 87388330}
   goal: {fileID: 870299200}
-  playerMovement: {fileID: 1223847683}
+  playerMovement: {fileID: 0}
 --- !u!1 &526365557
 GameObject:
   m_ObjectHideFlags: 0
@@ -2552,7 +2552,7 @@ PrefabInstance:
     - target: {fileID: 1705468735, guid: d512fe3ddd30137499c0a437fefd7d40, type: 3}
       propertyPath: stone
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1299919211}
     - target: {fileID: 1705468736, guid: d512fe3ddd30137499c0a437fefd7d40, type: 3}
       propertyPath: m_Radius
       value: 1.1168308
@@ -2670,11 +2670,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpriteRenderer: {fileID: 586432204}
   inventory: {fileID: 0}
---- !u!114 &1223847686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
 --- !u!114 &1223847683 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4023226370882176218, guid: d512fe3ddd30137499c0a437fefd7d40, type: 3}
@@ -2683,8 +2678,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1223847670}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2444579b5622b834dab9b6db3c5a0f83, type: 3}
   m_Script: {fileID: 11500000, guid: d16ae94871eef9d46b549ce51cf5e8c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1223847689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223847670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2444579b5622b834dab9b6db3c5a0f83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1235618758
@@ -2867,6 +2873,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9204906582566305120, guid: 31cd81fa3615d214bb90427231e6c2fe, type: 3}
   m_PrefabInstance: {fileID: 9204906581584497674}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1299919211 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6090422200074042666, guid: 31cd81fa3615d214bb90427231e6c2fe, type: 3}
+  m_PrefabInstance: {fileID: 9204906581584497674}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25411d2368fc9cc4daf70b2327057c10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1350622787
 GameObject:
   m_ObjectHideFlags: 0
