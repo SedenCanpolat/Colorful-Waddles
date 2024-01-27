@@ -34,6 +34,7 @@ public class TriggerCode : MonoBehaviour
             {
                 goal.CloseDialogue();
                 goal.FlagMission = 2;
+                
             };
             Debug.Log(count);
         }
