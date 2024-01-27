@@ -4607,6 +4607,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1387559124, guid: fe364c127000ffa49babcdcd16bd30e6, type: 3}
     - target: {fileID: 4620263938162186727, guid: 363935f390032c249a2effaf675e0adf, type: 3}
+      propertyPath: ColorScene
+      value: 
+      objectReference: {fileID: 1774658255}
+    - target: {fileID: 4620263938162186727, guid: 363935f390032c249a2effaf675e0adf, type: 3}
       propertyPath: PersonalizedItem
       value: 
       objectReference: {fileID: 11400000, guid: ca12ada0ab6301f4d8b7a88a4c11699a, type: 2}
@@ -5501,6 +5505,10 @@ PrefabInstance:
       propertyPath: Bubble
       value: 
       objectReference: {fileID: -323180996, guid: fe364c127000ffa49babcdcd16bd30e6, type: 3}
+    - target: {fileID: 4620263938162186727, guid: 363935f390032c249a2effaf675e0adf, type: 3}
+      propertyPath: ColorScene
+      value: 
+      objectReference: {fileID: 869897830}
     - target: {fileID: 4620263938162186727, guid: 363935f390032c249a2effaf675e0adf, type: 3}
       propertyPath: PersonalizedItem
       value: 
@@ -24511,7 +24519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &2070823175
 Grid:
   m_ObjectHideFlags: 0
@@ -24908,6 +24916,10 @@ PrefabInstance:
       propertyPath: Bubble
       value: 
       objectReference: {fileID: 387619392, guid: fe364c127000ffa49babcdcd16bd30e6, type: 3}
+    - target: {fileID: 4620263938162186727, guid: 363935f390032c249a2effaf675e0adf, type: 3}
+      propertyPath: ColorScene
+      value: 
+      objectReference: {fileID: 342904585}
     - target: {fileID: 6420137454348945553, guid: 363935f390032c249a2effaf675e0adf, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 0
