@@ -14,6 +14,7 @@ public class GiveObject : MonoBehaviour
                 Debug.Log("You did it!");
                 GetComponent<ObjectTake>().giveItem();
                 other.GetComponent<Goal>().CloseDialogue();
+                gameObject.LeanRotateAround(Vector3.left + Vector3.forward + Vector3.right, 20f, 0.3f).setLoopPingPong();
             }
             /*
             else{
