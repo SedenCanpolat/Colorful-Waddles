@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using Holylib.HolySoundEffects;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+
 
 
 public class Goal : MonoBehaviour
@@ -17,6 +20,8 @@ public class Goal : MonoBehaviour
 
     [SerializeField] AudioClip colorSFX;
     [SerializeField] AudioClip laughSFX;
+
+    Vignette vignette;
     
 
     // Start is called before the first frame update
@@ -35,7 +40,7 @@ public class Goal : MonoBehaviour
         SetColorfulMap(true);
         SceneManagement.instance.IncreaseColorCount();
         SoundEffectController.PlaySFX(colorSFX).SetVolume(1.30f);
-        Invoke("playlaughsfx", 0.7f);
+        Invoke("playlaughsfx", 1.2f);
     }
 
     void playlaughsfx(){
