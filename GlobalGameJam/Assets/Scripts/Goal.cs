@@ -22,6 +22,7 @@ public class Goal : MonoBehaviour
     public void CloseDialogue()
     {
         SpriteRenderer.sprite = null;
+        gameObject.LeanRotateAround(Vector3.left + Vector3.forward + Vector3.right, 20f, 0.3f).setLoopPingPong();
         //dialogueBubble.SetActive(false);
     }
 
