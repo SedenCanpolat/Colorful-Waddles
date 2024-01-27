@@ -22,6 +22,7 @@ public class TriggerCode : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         other.gameObject.GetComponent<Goal>()?.OpenDialogue();
+        
         if (goal.FlagMission == 1)
         {
             if (other.gameObject.GetComponent<Stone>())

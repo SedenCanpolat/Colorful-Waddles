@@ -13,15 +13,15 @@ public class GiveObject : MonoBehaviour
             if(other.GetComponent<Goal>().PersonalizedItem == inventory){
                 Debug.Log("You did it!");
                 GetComponent<ObjectTake>().giveItem();
+                other.GetComponent<Goal>().CloseDialogue();
             }
+            /*
             else{
                 // wrong item voice
-                if(Input.GetKeyDown(KeyCode.X)){
-                    // drop item 
-                    GetComponent<ObjectTake>().dropItem();
+               
                 } 
-
-            }                  
-        }
+            */
+            }
+            
     }
 }
