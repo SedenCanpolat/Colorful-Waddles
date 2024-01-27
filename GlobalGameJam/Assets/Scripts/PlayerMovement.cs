@@ -12,21 +12,25 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
 
     [SerializeField] AudioClip walkSFX;
+    [SerializeField] AudioClip quackSFX;
+    //SoundSource quacksound;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
        // SoundEffectController.PlaySFX(walkSFX);
+       StartCoroutine(Wait());
     }
 
     SoundSource walksound;
+    
+  
     void FixedUpdate()
     {
         animator.SetBool("walk", true);
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
         rb.velocity = input * moveSpeed * Time.fixedDeltaTime;
-        
 
         if (input.x == 1)
         {
@@ -47,9 +51,10 @@ public class PlayerMovement : MonoBehaviour
             targetPos.y += input.y;
 
             if(!walksound)
-                walksound = SoundEffectController.PlaySFX(walkSFX).SetVolume(0.3f).SetLoop(true);
+                //float randomTimer = Random.Range(3f, 5f);
+                walksound = SoundEffectController.PlaySFX(walkSFX).SetVolume(0.5f).SetLoop(true);
         }
-
+        
         else
         {
             animator.SetBool("walk", false);
@@ -59,16 +64,28 @@ public class PlayerMovement : MonoBehaviour
                 SoundEffectController.StopSFX(walksound);
                 walksound = null;
             }
+
         }
 
     }
+
 
     public void Preslide()
     {
         animator.SetTrigger("preslide 0");
 
         // animator.SetBool("preslide", false);
+    }
 
+
+    IEnumerator Wait()
+    {   
+        while(true){
+            yield return new WaitForSeconds(Random.Range(5f, 10f));
+            SoundEffectController.PlaySFX(quackSFX).SetVolume(0.30f).RandomPitchRange(0.90f, 1.10f);
+        
+        }
+      
     }
 
 

@@ -29,7 +29,7 @@ public class TriggerCode : MonoBehaviour
         {
             if (other.gameObject.GetComponent<Stone>())
             {
-                SoundEffectController.PlaySFX(fallSFX).SetVolume(1.30f);
+                SoundEffectController.PlaySFX(fallSFX).SetVolume(0.5f);
                 stone.TripCount();
                 count++;
             }
