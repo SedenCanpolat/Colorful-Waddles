@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Holylib.HolySoundEffects;
 
 public class TriggerCode : MonoBehaviour
 {
     public Goal goal;
     public Stone stone;
     public int count;
+    [SerializeField] AudioClip fallSFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class TriggerCode : MonoBehaviour
         {
             if (other.gameObject.GetComponent<Stone>())
             {
+                SoundEffectController.PlaySFX(fallSFX).SetVolume(1.30f);
                 stone.TripCount();
                 count++;
             }

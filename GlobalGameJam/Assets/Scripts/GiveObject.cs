@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Holylib.HolySoundEffects;
 
 public class GiveObject : MonoBehaviour
 {
    
     Item inventory;
+    [SerializeField] AudioClip WrongSFX;
 
     private void OnTriggerEnter2D(Collider2D other) {
         inventory = GetComponent<ObjectTake>().inventory;
@@ -16,12 +18,12 @@ public class GiveObject : MonoBehaviour
                 other.GetComponent<Goal>().CloseDialogue();
                 
             }
-            /*
+            
             else{
                 // wrong item voice
-               
+                SoundEffectController.PlaySFX(WrongSFX).SetVolume(1.30f).SetPitch(0.60f);
                 } 
-            */
+            
             }
             
     }
