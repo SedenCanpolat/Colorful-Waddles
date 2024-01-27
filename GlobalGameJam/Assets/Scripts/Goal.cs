@@ -7,17 +7,15 @@ public class Goal : MonoBehaviour
     public Sprite Bubble;
     public Sprite StartBubble;
     public SpriteRenderer SpriteRenderer;
+
+    public Item PersonalizedItem;
+
     // Start is called before the first frame update
     void Start()
     {
          SpriteRenderer.sprite = StartBubble;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void CloseDialogue(){
        // SetActive(false);

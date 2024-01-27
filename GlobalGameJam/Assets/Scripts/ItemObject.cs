@@ -7,7 +7,7 @@ public class ItemObject : MonoBehaviour
    public Item item;
    [SerializeField] SpriteRenderer spriteRenderer;
     
-   private void Start() {
+   public void Start() {
         spriteRenderer.sprite = item.sprite;
    }
 

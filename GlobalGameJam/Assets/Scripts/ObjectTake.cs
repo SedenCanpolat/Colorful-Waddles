@@ -14,13 +14,19 @@ public class ObjectTake : MonoBehaviour
                     inventory = other.GetComponent<ItemObject>().item;
                     Destroy(other.gameObject);
                     SpriteRenderer.sprite = inventory.sprite;
-                }      
+                }  
     }
 
-    void dropItem(){
+
+    public void giveItem(){
         inventory = null;
         SpriteRenderer.sprite = null;
     }
+
+    public void dropItem(){
+      // inventory.GetComponent<ItemObject>().item;
+    }
+
 }
 
 
