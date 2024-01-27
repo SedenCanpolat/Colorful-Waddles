@@ -48,6 +48,16 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    public void Preslide()
+    {
+        animator.SetTrigger("preslide 0");
+
+        // animator.SetBool("preslide", false);
+
+    }
+
+
+
 
 
 }
