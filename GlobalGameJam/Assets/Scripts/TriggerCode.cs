@@ -24,13 +24,17 @@ public class TriggerCode : MonoBehaviour
         other.gameObject.GetComponent<Goal>()?.OpenDialogue();
         if (goal.FlagMission == 1)
         {
-            other.gameObject.GetComponent<Stone>()?.TripCount();
-            count++;
-            Debug.Log(count);
+            if (other.gameObject.GetComponent<Stone>())
+            {
+                stone.TripCount();
+                count++;
+            }
             if (count == 3)
             {
                 goal.CloseDialogue();
-            }
+                goal.FlagMission = 2;
+            };
+            Debug.Log(count);
         }
 
     }
