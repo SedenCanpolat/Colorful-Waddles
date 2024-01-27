@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Holylib.HolySoundEffects;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -10,17 +11,22 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public Rigidbody2D rb;
 
+    [SerializeField] AudioClip walkSFX;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+       // SoundEffectController.PlaySFX(walkSFX);
     }
+
+    SoundSource walksound;
     void FixedUpdate()
     {
         animator.SetBool("walk", true);
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
-        rb.velocity = input * moveSpeed;
-
+        rb.velocity = input * moveSpeed * Time.fixedDeltaTime;
+        
 
         if (input.x == 1)
         {
@@ -39,11 +45,20 @@ public class PlayerMovement : MonoBehaviour
             var targetPos = transform.position;
             targetPos.x += input.x;
             targetPos.y += input.y;
+
+            if(!walksound)
+                walksound = SoundEffectController.PlaySFX(walkSFX).SetVolume(0.3f).SetLoop(true);
         }
 
         else
         {
             animator.SetBool("walk", false);
+
+            if(walksound)
+            {
+                SoundEffectController.StopSFX(walksound);
+                walksound = null;
+            }
         }
 
     }

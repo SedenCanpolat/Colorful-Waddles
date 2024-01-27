@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using Holylib.HolySoundEffects;
 
 public class ObjectTake : MonoBehaviour
 {
@@ -10,12 +11,14 @@ public class ObjectTake : MonoBehaviour
     public GameObject ItemPrefab;
 
     public Item inventory;
+    [SerializeField] AudioClip TakeSFX;
 
     private void OnTriggerEnter2D(Collider2D other) { // other == item
                 if(other.GetComponent<ItemObject>() && inventory == null){
                     inventory = other.GetComponent<ItemObject>().item;
                     Destroy(other.gameObject);
                     SpriteRenderer.sprite = inventory.sprite;
+                    SoundEffectController.PlaySFX(TakeSFX).SetVolume(1.30f);
                 }  
     }
 

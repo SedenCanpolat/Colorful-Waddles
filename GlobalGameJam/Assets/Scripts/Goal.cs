@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Holylib.HolySoundEffects;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class Goal : MonoBehaviour
 {
@@ -13,7 +14,10 @@ public class Goal : MonoBehaviour
     public Item PersonalizedItem;
     //public GameObject dialogueBubble;
     public int FlagMission = 0;
-    [SerializeField] int colorCount = 0;
+
+    [SerializeField] AudioClip colorSFX;
+    [SerializeField] AudioClip laughSFX;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -29,15 +33,17 @@ public class Goal : MonoBehaviour
         SpriteRenderer.sprite = null;
         gameObject.LeanRotateAround(Vector3.left + Vector3.forward + Vector3.right, 20f, 0.3f).setLoopPingPong();
         SetColorfulMap(true);
-        colorCount++;
-        if(colorCount == 3){
-            SceneManager.LoadScene( SceneManager.GetActiveScene().buildIndex + 1);
-        }
+        SceneManagement.instance.IncreaseColorCount();
+        SoundEffectController.PlaySFX(colorSFX).SetVolume(1.30f);
+        Invoke("playlaughsfx", 0.7f);
+    }
+
+    void playlaughsfx(){
+        SoundEffectController.PlaySFX(laughSFX).SetVolume(1.45f);
     }
 
     public void OpenDialogue()
     {
-
         Debug.Log("OpenDialogue");
         SpriteRenderer.sprite = Bubble;
         FlagMission = 1;
