@@ -24,12 +24,12 @@ public class TriggerCode : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         other.gameObject.GetComponent<Goal>()?.OpenDialogue();
-        
+
         if (goal.FlagMission == 1)
         {
             if (other.gameObject.GetComponent<Stone>())
             {
-                SoundEffectController.PlaySFX(fallSFX).SetVolume(1.30f);
+                SoundEffectController.PlaySFX(fallSFX).SetVolume(0.5f);
                 stone.TripCount();
                 count++;
             }
@@ -37,10 +37,8 @@ public class TriggerCode : MonoBehaviour
             {
                 goal.CloseDialogue();
                 goal.FlagMission = 2;
-                
             };
             Debug.Log(count);
         }
-
     }
 }
