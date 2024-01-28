@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -33,7 +29,7 @@ public class SceneManagement : MonoBehaviour
         colorCount += 1;
         VinImage.LeanAlpha(0.33f * (3-colorCount), 1f);
         if(colorCount == 3){
-           Invoke("LoadEnding", 2.4f);
+           Invoke("LoadEnding", 2.35f);
         }
     }
 

@@ -70,6 +70,7 @@ MonoBehaviour:
   PersonalizedItem: {fileID: 0}
   FlagMission: 0
   colorSFX: {fileID: 8300000, guid: e5cedf96d58df174c93e02ea2fa1c062, type: 3}
+  laughSFX: {fileID: 0}
 --- !u!1 &4789670360812235734
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,8 +225,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1983755843
-  m_SortingLayer: 4
+  m_SortingLayerID: -1395757733
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
