@@ -21,7 +21,7 @@ public class GiveObject : MonoBehaviour
             
             else{
                 // wrong item voice
-                SoundEffectController.PlaySFX(WrongSFX).SetVolume(1.30f).SetPitch(0.60f);
+                SoundEffectController.PlaySFX(WrongSFX).SetVolume(1.45f).SetPitch(0.60f);
                 } 
             
             }
