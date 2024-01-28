@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: WrongBook
   m_EditorClassIdentifier: 
   Name: WrongBook
-  sprite: {fileID: 21300000, guid: b21cda3ead81df84180de3d4c0d231aa, type: 3}
+  sprite: {fileID: 1445135734, guid: ed4edcc13cc60764181cc25a7679faf6, type: 3}
