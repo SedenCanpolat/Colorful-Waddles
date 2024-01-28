@@ -33,7 +33,7 @@ public class SceneManagement : MonoBehaviour
         colorCount += 1;
         VinImage.LeanAlpha(0.33f * (3-colorCount), 1f);
         if(colorCount == 3){
-           Invoke("LoadEnding", 2.5f);
+           Invoke("LoadEnding", 2.4f);
         }
     }
 
