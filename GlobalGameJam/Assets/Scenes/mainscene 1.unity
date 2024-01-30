@@ -8414,6 +8414,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1705468737, guid: d512fe3ddd30137499c0a437fefd7d40, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 303094120638453986, guid: d512fe3ddd30137499c0a437fefd7d40, type: 3}
       propertyPath: m_SortingLayer
       value: 5
