@@ -8,13 +8,7 @@ public class CameraController : MonoBehaviour
     public float smoothing;
     public Vector2 minPosition;
     public Vector2 maxPosition;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
+   
     void LateUpdate()
     {
         if (transform.position != target.position)

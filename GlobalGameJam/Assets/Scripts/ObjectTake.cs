@@ -19,6 +19,7 @@ public class ObjectTake : MonoBehaviour
                     Destroy(other.gameObject);
                     SpriteRenderer.sprite = inventory.sprite;
                     SoundEffectController.PlaySFX(TakeSFX).SetVolume(1.30f);
+                    
                 }  
     }
 

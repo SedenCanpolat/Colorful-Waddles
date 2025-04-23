@@ -11,9 +11,4 @@ public class Anim : MonoBehaviour
         gameObject.LeanMoveX(1.5f, 0.3f).setLoopPingPong();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

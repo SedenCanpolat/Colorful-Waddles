@@ -51,5 +51,8 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "GlobalGameJam.sln"
+    "dotnet.defaultSolution": "GlobalGameJam.sln",
+    "files.associations": {
+        "stdio.h": "c"
+    }
 }
