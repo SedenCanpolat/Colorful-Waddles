@@ -11,3 +11,5 @@ In terms of coding, I worked on:
 - In-game interactions  
 - Inventory system  
 - Scene management
+- 
+![08171-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/f2986476-c178-4fd6-a30b-ae4ae9207198)
