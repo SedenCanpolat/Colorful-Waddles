@@ -16,7 +16,7 @@ In terms of coding, I worked on:
 
 ## 🛠 Key Technical Implementations
 
-### ScriptableObject-Based Item Matching System
+### 1. ScriptableObject-Based Item Matching System
 
 Built a flexible quest system where each NPC has a personalized item requirement:
 
@@ -29,17 +29,17 @@ if (other.GetComponent<Goal>().PersonalizedItem == inventory)
 
 This architecture allowed team members to create and assign items without code changes, which was critical for parallel development during the jam.
 
-### Dual-Layer Color Reveal Mechanic
+### 2. Dual-Layer Color Reveal Mechanic
 
 Implemented the core game mechanic using a simple but effective dual-layer approach: grayscale sprites with colored versions overlaid. When players complete quests, the color layer activates, creating the visual transformation that drives the narrative.
 
 This solution avoided shader complexity while still delivering strong visual impact under tight time constraints.
 
-### Modular Quest State Machine
+### 3. Modular Quest State Machine
 
 Used simple integer flags (`FlagMission = 0 / 1 / 2`) for quest tracking, allowing different quest types. Some quests are completed by giving items, while others rely on environmental interactions (such as a stone-tripping counter). This flexibility allowed rapid iteration on quest design during the jam.
 
-### Progressive Vignette Feedback System
+### 4. Progressive Vignette Feedback System
 
 Linked world brightness directly to player progress:
 
@@ -49,7 +49,7 @@ VinImage.LeanAlpha(0.33f * (3 - colorCount), 1f);
 
 The vignette gradually fades as quests are completed, providing subtle visual feedback that reinforces the theme of “bringing color to the world” without relying on explicit UI elements.
 
-### Third-Party Library Integration for Rapid Development
+### 5. Third-Party Library Integration for Rapid Development
 
 Integrated **LeanTween** for animations and **Holylib.HolySoundEffects** for audio management:
 
